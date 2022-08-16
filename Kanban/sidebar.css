@@ -1,0 +1,38 @@
+
+
+.kanban_board_sidebar{
+padding:.5em;
+}
+
+.kanban_board_sidebar .addBoard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+.addBoard{
+    padding:.5em;
+}
+[data-action='addNewBoard']
+{
+    background:green;
+    border-radius: 5px;
+    padding:.5em;
+    cursor: pointer;
+    color:white;
+}
+
+.kanban_board_sidebar .boardsNameList{
+    display:flex;
+    flex-flow:row nowrap;
+    overflow-x:auto;
+    justify-content: flex-start;
+    gap:.5em;
+}
+
+.boardItem{
+    padding:1em;
+    background-color: white;
+    border-radius: 10px;
+    
+}
