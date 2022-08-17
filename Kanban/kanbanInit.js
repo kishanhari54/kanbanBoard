@@ -16,6 +16,7 @@ export class initializer {
             console.log('Already a Class has been created');
             return;
         }
+        
         new boardStorageService();
     }
 

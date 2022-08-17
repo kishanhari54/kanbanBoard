@@ -37,11 +37,10 @@ class board{
     set BoardHTML(name){
       let elem =   document.createElement('li');
       elem.classList.add('boardItem')
-      elem.innerHTML = ` <a class="boardtitle"> ${ this.name} </a>`
+      elem.innerHTML = ` <a class="boardtitle" data-name=${this.name} data-action="boardChanged"> ${ this.name} </a>`
       this.innerHTML = elem;
-      elem.addEventListener('click', (e)=>  { 
-        dispatchEvent(new CustomEvent('boardChanged' , { detail: this.name , bubbles:true}) )
-      })
+      
+
     }
     storeStatus(Status){
         this.status.push(Status);

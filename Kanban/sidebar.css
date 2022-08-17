@@ -31,8 +31,11 @@ padding:.5em;
 }
 
 .boardItem{
-    padding:1em;
+    padding:.5em;
     background-color: white;
     border-radius: 10px;
-    
+}
+
+.boardtitle{
+    padding:.5em;
 }

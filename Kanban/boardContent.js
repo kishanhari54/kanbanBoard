@@ -4,6 +4,7 @@ export class mainBoardContainer{
     constructor(){
         if(created) return created;
         created = this;
+        
        return this.createMainContentLayout();
     }
 
@@ -14,7 +15,9 @@ export class mainBoardContainer{
         setTimeout(() => {
             this.initMainContent();
         }, 500)
-
+        document.addEventListener('boardChanged', (e)=> { 
+            console.log(e);
+        })
         return this.mainContainerLayout;
     }
     initMainContent() {
@@ -39,9 +42,7 @@ export class mainBoardContainer{
     createBoardSection(){
         let element = document.createElement('section');
         element.classList.add('boardDetails');
-        document.body.addEventListener('boardChanged', (e)=> { 
-            console.log(e);
-        })
+       
         return element;
     }
 }

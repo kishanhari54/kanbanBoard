@@ -30,7 +30,7 @@ export class sidebar {
         `
         fragment.appendChild(element);
         let boardListContainer = document.createElement('ul');
-        boardListContainer .classList.add('boardsNameList')
+        boardListContainer.classList.add('boardsNameList');
         fragment.appendChild(boardListContainer );
 
         this.sidebar = fragment;
@@ -52,6 +52,14 @@ export class sidebar {
            this.appendBoard(addedBoard);
         }
     }
+
+    boardChanged(event){
+        document.dispatchEvent(new CustomEvent('boardChanged' , { detail: { 
+            name: event.target.dataset.name
+        } , bubbles:true}) );
+    }
+
+    
 
     appendBoard(board){
         this.sidebarLayout.querySelector('.boardsNameList').appendChild(board.BoardHTML);
